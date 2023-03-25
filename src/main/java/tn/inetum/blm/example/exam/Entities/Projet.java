@@ -1,5 +1,6 @@
 package tn.inetum.blm.example.exam.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,7 +20,9 @@ public class Projet {
     private String title;
     private String description;
     @OneToMany(mappedBy = "projet",cascade = CascadeType.PERSIST)
+    @JsonIgnore
     private List<Sprint> sprintList;
     @ManyToMany(mappedBy = "projetList")
+    @JsonIgnore
     private List<User> userList;
 }

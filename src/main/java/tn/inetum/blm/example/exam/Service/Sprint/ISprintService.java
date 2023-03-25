@@ -7,4 +7,5 @@ import javax.swing.*;
 
 public interface ISprintService {
     public Sprint addSprint (Sprint sprint);
+    public void addSprintAndAssignToProject(Sprint sprint, int idProject);
 }

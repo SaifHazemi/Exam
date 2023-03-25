@@ -19,7 +19,7 @@ public class User {
     private String email;
     private String pwd;
     private String fname;
-    private String Iname;
+    private String iname;
     @Enumerated(EnumType.STRING)
     private Role role;
     @ManyToMany
